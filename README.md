@@ -6,26 +6,25 @@ Whereas high $r_{WG}$ --scores are known as a requirement for data aggregation f
 
 This package includes several functions that allow for an easy way to test for significance when comparing the strength of rater agreement of two groups, using the steps proposed by @cohen_2001.
 
-## Usage
-
-## How to use brms
+## Installation
 
 ``` r
-library(brms)
+devtools::install_github("GGLuca/rwgDiff")
 ```
 
-As a simple example, we use poisson regression to model the seizure
-counts in epileptic patients to investigate whether the treatment
-(represented by variable `Trt`) can reduce the seizure counts and
-whether the effect of the treatment varies with the (standardized)
-baseline number of seizures a person had before treatment (variable
-`zBase`). As we have multiple observations per person, a group-level
-intercept is incorporated to account for the resulting dependency in the
-data.
+## How to use rwgDiff
 
 ``` r
-fit1 <- brm(count ~ zAge + zBase * Trt + (1|patient),
-            data = epilepsy, family = poisson())
+library(rwgdiff)
+```
+
+## Example 
+
+Consider two groups in which we measure the distribution of the opinions of the group members. In one group, the measurement is done after the group members have discussed a certain issue. Following @levitan_2016, we expect that there is more conformity in the discussion group condition than in the control condition, which is we call, for sake of brevity, to be a nominal group. Table 1 shows the hypothetical distribution in a simulated dataset.
+
+
+``` r
+
 ```
 
 ### Arguments
