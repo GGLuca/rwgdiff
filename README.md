@@ -1,4 +1,4 @@
-# Diff Package
+# rwgDiff Package
 
 ## Overview
 
